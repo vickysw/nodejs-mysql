@@ -28,7 +28,7 @@ exports.createTutorial = (req,res)=>{
   })
 }
 
-exports.getAllTours = (req,res)=>{
+exports.getAllTutorials = (req,res)=>{
     const name = req.body.title;
     const perPage = req.body.perPage;
     const offset = req.body.offset;
@@ -44,7 +44,7 @@ exports.getAllTours = (req,res)=>{
     });
 }
 
-exports.getTour = (req,res)=>{
+exports.getTutorial = (req,res)=>{
      Tutorial.findById(req.params.id,(err,result)=> {
         if (err)
         res.status(500).send({
@@ -55,7 +55,7 @@ exports.getTour = (req,res)=>{
      })
 }
 
-exports.updateTour = (req,res)=>{
+exports.updateTutorial = (req,res)=>{
     Tutorial.editTour(req,(err,result)=>{
         if (err)
         res.status(500).send({
@@ -66,7 +66,7 @@ exports.updateTour = (req,res)=>{
     })
 }
 
-exports.deleteTour = (req,res)=>{
+exports.deleteTutorial = (req,res)=>{
     Tutorial.removeTour(req.params.id,(err,result)=>{
         if (err)
         res.status(500).send({

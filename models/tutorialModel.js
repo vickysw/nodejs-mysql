@@ -25,7 +25,7 @@ const Tutorial = function(tutorial) {
     const itemSize= (param.offset > 0) ? param.offset*(param.perPage) : 1*(param.perPage);
     const offset =  param.perPage*param.offset;
 
-     sql.query(`SELECT * FROM tutorials WHERE 	published=0 LIMIT ${offset},${itemSize}`,(err,res)=>{
+     sql.query(`SELECT * FROM tutorials WHERE	published=0`,(err,res)=>{
         if (err) {
             console.log("error: ", err);
             result(null, err);

@@ -5,6 +5,6 @@ const tutorialController = require('./../controllers/tutorialController');
 
 // router.param('id',tutorialController.validateTour)
 
-router.route('/').get(tutorialController.getAllTours).post(tutorialController.createTutorial);//.post(createTour);
-router.route('/:id').get(tutorialController.getTour).patch(tutorialController.updateTour).delete(tutorialController.deleteTour);
+router.route('/').get(tutorialController.getAllTutorials).post(tutorialController.createTutorial);//.post(createTour);
+router.route('/:id').get(tutorialController.getTutorial).patch(tutorialController.updateTutorial).delete(tutorialController.deleteTutorial);
 module.exports = router;
